@@ -68,7 +68,7 @@ section {
 }
 
 
-/* 기술 스택 */
+
 
 #slogan {
     background-color: #1C2126;
@@ -91,7 +91,7 @@ color:#c9cacb;
     /*justify-content: center; /*가로 중앙 정렬 */
     align-items: center; 
 }
-
+/* 기술 스택 */
 #tech {
     position: relative;
     background-color: #181818;

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>임승현의 포트폴리오</title>
+  <style>
+    body {
+    background-color: #181818; 
+    color: #E5E5E5; 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex;
+}
+header {
+    background-color: #24292E; 
+    width: 10rem;
+    height: 100vh;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-right: 1px solid #444C56; 
+}
+.logo a {
+    color: #c93866;
+    text-decoration: none; 
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo a:hover {
+    color: #D8B4A0; 
+}
+
+nav a {
+    color: #E5E5E5;
+    text-decoration: none;
+    font-weight:500;
+    margin: 1rem 0;
+    font-size: 1rem;
+    transition: color 0.3s;
+    display: block;
+}
+
+nav a:hover {
+    color: #D8B4A0; 
+}
+.highlighted-link {
+    color: #cecece;
+font-size: 0.8rem; 
+margin-left: 10px;
+font-weight: normal;
+}
+.highlight {
+    color: #c93866; 
+}
+
+
+.container {
+    position: relative;
+margin-left: 180px; 
+width: calc(100% - 180px); 
+padding-left: 1rem; 
+}
+section {
+    padding: 4rem 0;
+ 
+   padding-left: 3rem; 
+}
+
+#slogan {
+    background-color: #1C2126;
+    height: 55.5rem;
+    position: relative;
+}
+#slogan h2{
+font-size: 2.8rem;
+}
+#slogan p {
+position: relative;
+top: 50%;
+color:#c9cacb;
+}
+
+#about {
+    background-color: #181818;
+    height: 48rem;
+    display: flex;
+    /*justify-content: center; /*가로 중앙 정렬 */
+    align-items: center; 
+}
+  </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                PORTFOLIO
+            </a>
+            <h4>
+                <span class="highlight">성장 도전</span>하는
+                <br> 프론트엔드 개발자
+                <br> <span class="highlight">임승현</span> 입니다.
+            </h4>
+            
+        </div>
+        <nav>
+            <a href="index.html#slogan">소개</a>
+            <a href="index.html#tech">기술 스택</a>
+            <a href="index.html#projects">Study</a>
+            <a href="index.html#projects" class="highlighted-link">-백엔드</a>
+            <a href="index.html#frontend">Project</a>
+            <a href="index.html#frontend" class="highlighted-link">-프론트엔드</a>
+            <a href="index.html#design" class="highlighted-link">-디자인</a>
+            <a href="index.html#planning" class="highlighted-link">-기획</a>
+            <a href="index.html#contact">연락처</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="slogan">
+            <h2>
+                끊임없이 <span class="highlight">성장</span>하고 새로운 <span class="highlight">도전</span>을 즐기는<br>
+                프론트엔드 개발자<br>
+                임승현 입니다
+            </h2>
+    
+            <p> HTML, CSS, JavaScript와 같은 프론트엔드 기술과 함께 PHP, MySQL, Python을 학습하여 백엔드 역량을 확장하고 있습니다.<br>
+                폭 넓은 경험을 바탕으로 다양한 기술을 통합해 복잡한 문제를 해결하는데 주력하고 있습니다.</p>
+        </section>
+
+       
+   
+</body>
+</html>
