@@ -54,9 +54,12 @@ font-weight: normal;
     color: #c93866; 
 }
 
-.container{
-    margin: 3rem;
-    margin-left: 15rem;
+
+.container {
+    position: relative;
+margin-left: 180px; 
+width: calc(100% - 180px); 
+padding-left: 1rem; 
 }
 section {
     padding: 4rem 0;
