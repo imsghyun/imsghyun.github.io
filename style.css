@@ -53,3 +53,216 @@ font-weight: normal;
 .highlight {
     color: #c93866; 
 }
+
+.container{
+    margin: 3rem;
+    margin-left: 15rem;
+}
+
+
+/* 기술 스택 */
+
+#slogan {
+    background-color: #1C2126;
+    height: 55.5rem;
+    position: relative;
+}
+#slogan h2{
+font-size: 2.8rem;
+}
+#slogan p {
+position: relative;
+top: 50%;
+color:#c9cacb;
+}
+
+#about {
+    background-color: #181818;
+    height: 48rem;
+    display: flex;
+    /*justify-content: center; /*가로 중앙 정렬 */
+    align-items: center; 
+}
+
+#tech {
+    position: relative;
+    background-color: #181818;
+    height: 70rem;
+}
+#tech p{
+    position: relative;
+    text-align: center;
+}
+.skills-section {
+margin: 40px;
+padding: 0 20px; 
+}
+
+.skills-list {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 20px;
+}
+
+.skills-list span {
+background-color:  #D8B4A0;
+color: #1f1f1f;
+padding: 0.5rem 1rem;
+border-radius: 20px;
+font-size: 1rem;
+border: 1px solid #444C56;
+}
+
+.skills-list span.highlight {
+background-color: #c93866;
+padding: 1rem 2.0rem;
+border-radius: 40px;
+color: #181818;
+}
+
+.skills-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr); 
+gap: 10px;
+width: 100%; 
+box-sizing: border-box;
+}
+
+
+
+.skill-card {
+background: #24292E;
+color: #E5E5E5;
+border: 1px solid #444C56;
+border-radius: 8px;
+padding: 1.0rem;
+text-align: center;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+box-sizing: border-box;
+}
+.large-card {
+grid-column: span 3;
+width: 100%;
+}
+.skill-card h3 {
+color: #D8B4A0;
+font-size: 1.2rem;
+margin-bottom: 0.5rem;
+}
+.large-card h3 {
+color: #c93866; 
+}
+
+
+.skill-card p {
+color: #6C757D;
+font-size: 0.9rem;
+}
+
+/* Project */
+#projects {
+    position: relative;
+    background-color: #1C2126;
+    margin-top: 10rem;
+}
+
+section h2, section p {
+display: block; 
+text-align: left; 
+margin-bottom: 1rem;
+padding-left: 0.5rem;
+}
+.highlight {
+    color: #c93866; 
+}
+
+section p {
+    color: #6C757D;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    padding-left: 0.5rem; 
+}
+
+.project-container {
+    position: relative;
+display: grid;
+grid-template-columns: 1fr; 
+gap: 2rem;
+padding: 2rem;
+}
+
+
+
+
+
+/* Footer Section */
+#contact {
+    position: relative;
+    background-color: #181818;
+    color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#contact h2 {
+    position: relative;
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #e9c46a;
+}
+
+#contact p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 5px 0;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+.contact-info strong {
+    color: #f4a261;
+}
+
+.social-links {
+    position: relative;
+    margin-top: 20px;
+    display: flex; /* Flexbox를 사용하여 버튼 정렬 */
+    justify-content: center; /* 버튼들을 가로로 가운데 정렬 */
+    gap: 20px; /* 버튼 간 간격 */
+}
+
+.social-links .button {
+    position: relative;
+    display: inline-block;
+    margin: 0; /* Flexbox 사용 시 margin 제거 */
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #264653;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.social-links .button:hover {
+    background-color: #1e7266;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #aaaaaa;
+    border-top: 1px solid #444444;
+    padding-top: 10px;
+}
