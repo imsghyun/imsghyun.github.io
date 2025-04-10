@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+
+    <style>
+        body {
+            background-color: #181818; 
+            color: #E5E5E5; 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            display: flex;
+        }
+
+        header {
+            background-color: #24292E; 
+            width: 180px;
+            height: 100vh;
+            padding: 2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: fixed;
+            top: 0;
+            left: 0;
+            border-right: 1px solid #444C56; 
+            z-index: 10;
+        }
+
+        .logo a {
+            color: #c93866;
+            text-decoration: none; 
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .logo a:hover {
+            color: #D8B4A0; 
+        }
+
+        nav a {
+            color: #E5E5E5;
+            text-decoration: none;
+            font-weight:500;
+            margin: 1rem 0;
+            font-size: 1rem;
+            transition: color 0.3s;
+            display: block;
+        }
+
+
+        nav a:hover {
+            color: #D8B4A0; 
+        }
+        .highlighted-link {
+            color: #cecece;
+    font-size: 0.8rem; 
+    margin-left: 10px;
+    font-weight: normal;
+}
+
+.highlight {
+            color: #c93866; 
+        }
+        .container {
+            margin-left: 200px; 
+            width: calc(100% - 180px); 
+            padding: 2rem 4rem;
+            display: flex;
+            flex-direction: column; /* 세로 정렬 */
+            gap: 2rem; /* 코드 블록 간격 */
+        }
+        .return-button {
+    margin-top: 20px;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #c93866;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 10%; 
+    text-align: center;
+}
+
+.return-button:hover {
+    background-color: #D8B4A0;
+}
+        .code-container {
+            position: relative;
+        }
+
+        pre {
+            background-color: #2D2D2D; /* 어두운 배경색 */
+            color: #FFFFFF; /* 텍스트 색상 */
+            padding: 1rem; /* 내부 여백 */
+            border-radius: 8px; /* 모서리를 둥글게 */
+            overflow-x: auto; /* 가로 스크롤 가능 */
+            font-size: 0.9rem; /* 글씨 크기 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+            margin: 1rem 0; /* 상하 여백 */
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace; /* 코딩 전용 폰트 */
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #c93866;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+        }
+
+        .copy-btn:hover {
+            background-color: #D8B4A0;
+        }
+
+        .code-description {
+            color: #c3c3c3;
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+
+        .code-description strong {
+            color: #D8B4A0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                PORTFOLIO
+            </a>
+            <h4>
+                <span class="highlight">성장 도전</span>하는
+                <br> 백엔드 개발자
+                <br> <span class="highlight">임승현</span> 입니다.
+            </h4>
+            
+        </div>
+        <nav>
+            <a href="index.html#slogan">소개</a>
+            <a href="index.html#tech">기술 스택</a>
+            <a href="index.html#projects">Study</a>
+            <a href="index.html#projects" class="highlighted-link">-백엔드</a>
+            <a href="index.html#frontend">Project</a>
+            <a href="index.html#frontend" class="highlighted-link">-프론트엔드</a>
+            <a href="index.html#design" class="highlighted-link">-디자인</a>
+            <a href="index.html#planning" class="highlighted-link">-기획</a>
+            <a href="index.html#contact">연락처</a>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <button class="return-button" onclick="location.href='index.html#projects';">이전으로</button>
+        <h1>주요 코드</h1>
+        <div class="code-container">
+            <p class="code-description">
+                <strong> 그리드 방식 (Grid View):</strong> 제품 정보를 **그리드(격자)**와 리스트(목록) 방식으로 표시 가능
+               
+            </p>
+            <pre>
+                <code class="language-javascript">
+
+    .container .products.grid {
+        display: flex; 
+        flex-wrap: wrap; 
+        justify-content: space-between; 
+    }
+    .container .products.grid .product {
+        width: 30%; 
+        padding: 8px;
+        border: 2px solid #bbb; 
+        border-radius: 10px; 
+    }
+                </code>
+        </div>
+
+
+        <div class="code-container">
+            <p class="code-description">
+                <strong> 슬라이더 동작:</strong> nextImage()와 prevImage()로 현재 슬라이드 인덱스를 변경
+                <br>showSlide()로 해당 슬라이드에 active 클래스를 추가하여 표시
+                <br>querySelector와 classList를 사용해 슬라이더의 활성 상태 관리
+            </p>
+            <pre>
+                <code class="language-javascript">
+
+    let slider = document.querySelector('.slider');
+    let slides = document.querySelectorAll('.slider .slide'); 
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide) => {
+            slide.classList.remove('active'); 
+        });
+        slides[index].classList.add('active'); 
+    }
+
+    function nextImage() {
+        currentIndex++;
+        if (currentIndex >= slides.length) {
+            currentIndex = 0; 
+        }
+        showSlide(currentIndex);
+    }
+
+    function prevImage() {
+        currentIndex--;
+        if (currentIndex < 0) {
+            currentIndex = slides.length - 1;
+        }
+        showSlide(currentIndex);
+    }
+
+    showSlide(currentIndex);
+                </code>
+            </pre>
+        </div>
+
+      
+    </div>
+    
+    
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+
+    <script>
+         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+        function copyCode(button) {
+            const codeBlock = button.previousElementSibling.previousElementSibling.innerText;
+            navigator.clipboard.writeText(codeBlock)
+                .then(() => {
+                    button.textContent = "복사 완료!";
+                    setTimeout(() => button.textContent = "복사", 2000);
+                })
+                .catch(err => console.error("복사 실패:", err));
+        }
+    </script>
+</body>
+</html>

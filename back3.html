@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+
+    <style>
+        body {
+            background-color: #181818; 
+            color: #E5E5E5; 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            display: flex;
+        }
+
+        header {
+            background-color: #24292E; 
+            width: 180px;
+            height: 100vh;
+            padding: 2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: fixed;
+            top: 0;
+            left: 0;
+            border-right: 1px solid #444C56; 
+            z-index: 10;
+        }
+
+        .logo a {
+            color: #c93866;
+            text-decoration: none; 
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .logo a:hover {
+            color: #D8B4A0; 
+        }
+
+        nav a {
+            color: #E5E5E5;
+            text-decoration: none;
+            font-weight:500;
+            margin: 1rem 0;
+            font-size: 1rem;
+            transition: color 0.3s;
+            display: block;
+        }
+
+        nav a:hover {
+            color: #D8B4A0; 
+        }
+        a {
+            color: #D8B4A0; 
+            text-decoration: none; 
+            transition: color 0.3s ease; 
+        }
+        a:hover {
+            color: #c93866; 
+            text-decoration: underline; 
+        }
+        .highlighted-link {
+            color: #cecece;
+    font-size: 0.8rem; 
+    margin-left: 10px;
+    font-weight: normal;
+
+
+}
+.highlight {
+            color: #c93866; 
+        }
+        .container {
+            margin-left: 200px; 
+            width: calc(100% - 180px); 
+            padding: 2rem 4rem;
+            display: flex;
+            flex-direction: column; /* 세로 정렬 */
+            gap: 2rem; /* 코드 블록 간격 */
+        }
+        .return-button {
+    margin-top: 20px;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #c93866;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 10%; 
+    text-align: center;
+}
+
+.return-button:hover {
+    background-color: #D8B4A0;
+}
+        .code-container {
+            position: relative;
+        }
+
+        pre {
+            background-color: #2D2D2D; /* 어두운 배경색 */
+            color: #FFFFFF; /* 텍스트 색상 */
+            padding: 1rem; /* 내부 여백 */
+            border-radius: 8px; /* 모서리를 둥글게 */
+            overflow-x: auto; /* 가로 스크롤 가능 */
+            font-size: 0.9rem; /* 글씨 크기 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+            margin: 1rem 0; /* 상하 여백 */
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace; /* 코딩 전용 폰트 */
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #c93866;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+        }
+
+        .copy-btn:hover {
+            background-color: #D8B4A0;
+        }
+
+        .code-description {
+            color: #c3c3c3;
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+
+        .code-description strong {
+            color: #D8B4A0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                PORTFOLIO
+            </a>
+            <h4>
+                <span class="highlight">성장 도전</span>하는
+                <br> 백엔드 개발자
+                <br> <span class="highlight">임승현</span> 입니다.
+            </h4>
+            
+        </div>
+        <nav>
+            <a href="index.html#slogan">소개</a>
+            <a href="index.html#tech">기술 스택</a>
+            <a href="index.html#projects">Study</a>
+            <a href="index.html#projects" class="highlighted-link">-백엔드</a>
+            <a href="index.html#frontend">Project</a>
+            <a href="index.html#frontend" class="highlighted-link">-프론트엔드</a>
+            <a href="index.html#design" class="highlighted-link">-디자인</a>
+            <a href="index.html#planning" class="highlighted-link">-기획</a>
+            <a href="index.html#contact">연락처</a>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <button class="return-button" onclick="location.href='index.html#projects';">이전으로</button>
+        <h1>과정(python hello world 출력)</h1>
+        <div class="explain">
+            <h2>1. 파이썬 설치</h2>
+            <h4>해당 웹사이트에 들어가서 파이썬 다운로드</h4>     
+            <a href="https://www.python.org/downloads/"target="_blank" rel="noopener noreferrer">파이썬 다운로드하기</a>
+            <h5>Downloads > Windows > "View the full list of downloads" </h5>
+            <img src="img/python0.png">
+       
+           
+        </div>
+               
+
+        <div class="explain">
+            <h2>2. 설치 파일 실행</h2>
+            <h4>Install Now를 눌러 설치</h4>
+            <img src="img/python1.png">
+            <img src="img/python2.png">
+        </div>
+
+
+        <div class="explain">
+            <h2>3. 파이썬 실행 해보기</h2>
+            <h4>윈도우 실행창에서 cmd를 눌러 명령 프롬프트창을 키기</h4>
+            <h4>프롬프트가 켜졌으면 python이라고 치고 엔터</h4>
+            <h5>print("Hello world") 를 입력하여 "Hello world" 출력</h5>
+           
+            <!--
+            <img src="img/python3.png">
+             -->
+
+            <div class="code-container">
+                <p class="code-description">
+                    <strong>"Hello world" 출력 : </strong> print("Hello world") 를 입력
+                </p>
+                <pre>
+                    <code class="language-javascript">
+    Microsoft Windows [Version 10.0.22631.4602]
+    (c) Microsoft Corporation. All rights reserved.
+    
+    C:\Users\82102>python
+    Python 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)] on win32
+    Type "help", "copyright", "credits" or "license" for more information.
+    >>> print("Hello world")
+    Hello world
+    >>>
+                    </code>
+                </pre>
+          
+            </div>
+
+
+    
+            <br>
+
+        <!--
+                  <img src="img/python4.png">
+        -->
+      
+            <div class="code-container">
+                <p class="code-description">
+                    <strong>변외로 print("Hello sh")을 입력하여 "Hello sh"를 출력 </strong> 
+                </p>
+                <pre>
+                    <code class="language-javascript">
+    Microsoft Windows [Version 10.0.22631.4602]
+    (c) Microsoft Corporation. All rights reserved.
+    
+    C:\Users\82102>python
+    Python 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)] on win32
+    Type "help", "copyright", "credits" or "license" for more information.
+    >>> print("Hello world")
+    Hello world
+    >>> print("Hello sh")
+    Hello sh
+    >>>         
+                    </code>
+                </pre>
+          
+            </div>
+        </div>
+            
+    </div>
+     <script>
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+     </script>
+      
+</body>
+</html>
